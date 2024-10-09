@@ -22,17 +22,18 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - common-files.yml
-          - common-packages.yml
-          - common-scripts.yml
-          - hyprland-files.yml
-          - hyprland-packages.yml
-          - hyprland-scripts.yml          
-          - recipe-hyprland.yml
-          - recipe-hyprland-nvidia.yml
-          - sddm-packages.yml
-          - sddm-sripts.yml
-          - sddm-systemd.yml
+          - recipe.yml
+          # - common-files.yml
+          # - common-packages.yml
+          # - common-scripts.yml
+          # - hyprland-files.yml
+          # - hyprland-packages.yml
+          # - hyprland-scripts.yml          
+          # - recipe-hyprland.yml
+          # - recipe-hyprland-nvidia.yml
+          # - sddm-packages.yml
+          # - sddm-sripts.yml
+          # - sddm-systemd.yml
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
