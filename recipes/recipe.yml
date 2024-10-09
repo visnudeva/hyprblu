@@ -11,13 +11,13 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same modul
 modules:
   - type: files
-  files:
+    files:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
                   
   - type: script
-  scripts:
+    scripts:
   - settheming.sh
   - addbrewjustimport.sh
   - removeunprofessionalwallpapers.sh
@@ -25,7 +25,7 @@ modules:
   - setsddmtheming.sh
   
   - type: rpm-ostree
-  install:
+    install:
 # launcher
   - rofi-wayland
 
@@ -146,8 +146,8 @@ modules:
       # - org.gnome.eog
 
   - type: systemd
-system:
-  enabled:
+    system:
+    enabled:
     - sddm-boot.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
