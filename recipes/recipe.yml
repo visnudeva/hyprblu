@@ -25,7 +25,7 @@ modules:
   - setsddmtheming.sh
   
   - type: rpm-ostree
-    install:
+install:
 # launcher
   - rofi-wayland
 
@@ -120,7 +120,7 @@ modules:
   - kwallet
   - pam-kwallet
 
-    remove:
+remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
   - firefox
@@ -131,22 +131,27 @@ modules:
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-    install:
-  - org.mozilla.firefox
-  - org.gnome.Loupe
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - com.valvesoftware.Steam
+        - org.gnome.Loupe
+        - io.github.celluloid_player.Celluloid
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Calendar
+        - com.github.tchx84.Flatseal
+        - it.mijorus.gearlever
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
-    remove:
+      remove:
       # - org.gnome.eog
 
   - type: systemd
-    system:
-    enabled:
+system:
+enabled:
   - sddm-boot.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
