@@ -1,5 +1,0 @@
-ublue_variants:
-  - label: visnueva/hyprblu
-    ks: /kickstart/ublue-os.ks
-    flavors:
-      - label: hyprblu
