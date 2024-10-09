@@ -23,7 +23,7 @@ scripts:
   - sethyprlandwaybarmodules.sh
   - setsddmtheming.sh
   
- type: rpm-ostree
+- type: rpm-ostree
 install:
 # launcher
   - rofi-wayland
