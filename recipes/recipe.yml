@@ -119,12 +119,13 @@ modules:
   - qt5-qtsvg
   - kwallet
   - pam-kwallet
+  
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
-      - firefox
-      - dunst
-      - firefox-langpacks
+  - firefox
+  - dunst
+  - firefox-langpacks
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -133,20 +134,20 @@ modules:
       # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-        - org.mozilla.firefox
-        - org.gnome.Loupe
+    install:
+  - org.mozilla.firefox
+  - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
-      remove:
+    remove:
       # - org.gnome.eog
 
   - type: systemd
     system:
     enabled:
-    - sddm-boot.service
+  - sddm-boot.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
