@@ -15,16 +15,16 @@ modules:
       - usr: /usr # copies config/files/usr into your image's /usr.
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
-type: script
-scripts:
+  - type: script
+  scripts:
   - settheming.sh
   - addbrewjustimport.sh
   - removeunprofessionalwallpapers.sh
   - sethyprlandwaybarmodules.sh
   - setsddmtheming.sh
   
-- type: rpm-ostree
-install:
+  - type: rpm-ostree
+  install:
 # launcher
   - rofi-wayland
 
@@ -144,7 +144,7 @@ install:
       remove:
       # - org.gnome.eog
 
-  type: systemd
+  - type: systemd
 system:
   enabled:
     - sddm-boot.service
