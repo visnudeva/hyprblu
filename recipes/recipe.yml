@@ -91,7 +91,7 @@ install:
   - kanshi
 
 # terminal
-  - foot
+  - kitty
 
 # notifications
   - dunst
@@ -124,7 +124,6 @@ remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
   - firefox
-  - dunst
   - firefox-langpacks
 
   - type: default-flatpaks
@@ -135,13 +134,17 @@ remove:
       repo-name: flathub
       repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - com.valvesoftware.Steam
-        - org.gnome.Loupe
-        - io.github.celluloid_player.Celluloid
-        - com.mattjakeman.ExtensionManager
-        - org.gnome.Calendar
-        - com.github.tchx84.Flatseal
-        - it.mijorus.gearlever
+        - org.mozilla.firefox
+        - io.mpv.Mpv
+        - org.localsend.localsend_app
+        - com.stremio.Stremio
+        - org.telegram.desktop
+        - io.github.flattool.Warehouse
+        - de.haeckerfelix.Shortwave
+        - com.github.neithern.g4music
+        - org.deluge_torrent.deluge
+        - run org.geany.Geany
+       
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
